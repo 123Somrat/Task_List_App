@@ -60,3 +60,18 @@ function clearTask(){
 
    };
 };
+
+//filter Task
+
+function filterTask(e){
+  let text = e.target.value.toLowercase();
+
+  document.querySelectorAll("li").forEach(task=>{
+    let iteam = task.firstChild.textContent;
+    if(iteam.toLowerCase().indexOf(text)!= -1){
+       task.style.display = "block";
+    }else{
+        task.style.display="none"
+    };
+  });
+};
