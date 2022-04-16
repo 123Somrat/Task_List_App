@@ -35,3 +35,17 @@ function addTask(e){
   e.preventDefault();
 
 }
+
+// Remove Element
+
+function removeTask(e){
+  if(e.target.hasAttribute("href")){
+     if(confirm("Are You Sure")){
+
+      let element = e.target.parentElement;
+       element.remove();
+       console.log(e.target)
+     };
+  };
+};
+
