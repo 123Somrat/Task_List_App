@@ -14,3 +14,24 @@ tasklist.addEventListener("click",removeTask);
 clearBtn.addEventListener("click",clearTask);
 filter.addEventListener("keyup",filterTask);
 document.addEventListener("DomContentLoaded",getTasks);
+
+//Define Function 
+// Add Task
+
+function addTask(e){
+  if(taskInput.value=== ""){
+    alert ("Add A Task");
+   }else{
+     let li = document.createElement("li");
+     li.appendChild(document.createTextNode(taskInput.value + " "));
+    let link = document.createElement("a");
+    link.setAttribute("href","#");
+    link.innerHTML="X"
+    li.appendChild(link);
+    storeTaskInLocalStorage(taskInput.value);
+    taskInput.value="";
+
+ }
+  e.preventDefault();
+
+}
