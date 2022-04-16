@@ -49,3 +49,14 @@ function removeTask(e){
   };
 };
 
+
+//clear Task
+
+function clearTask(){
+   //tasklist.innerHTML = "";
+
+   while(tasklist.firstChild){
+     tasklist.removeChild(tasklist.firstChild);
+
+   };
+};
